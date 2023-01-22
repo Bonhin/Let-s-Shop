@@ -1,0 +1,21 @@
+<header>
+    <div class="navbar navbar-light" style="background-color: #6c038b;">
+        <div class="navbar-brand align-item-center d-flex">
+            &nbsp;<i [routerLink]="['/home/lista']" style="font-size:30px; cursor: pointer;" class="fas fa-shipping-fast"></i>&nbsp;
+            <strong [routerLink]="['/home/lista']" style="cursor: pointer;">Let's Shop</strong>
+        </div>
+        <div>
+            <input [(ngModel)] ="produtoProcurado" (keyup)="procurarProduto($event)" type="search" class="form-control" placeholder="Search">
+        </div>
+        <div>
+            <button *ngIf="loginCheck" [routerLink]="['/login']" class="btn btn-outline-light my-2 my-sm-0">Login</button>&nbsp;
+            <button *ngIf="logoutCheck" (click)=logout() [routerLink]="['/login']" class="btn btn-outline-light my-2 my-sm-0">Logout</button>&nbsp;
+
+            <button routerLink="carrinho" class="btn btn-primary" style="background-color: #6c038b; border: none;">
+                <i style="font-size: 30px;" class="fas fa-cart-plus"></i>
+                <div style="font-size: 10px;" class="badge bg-danger">{{totalDeItensNoCarrinho}}</div>
+            </button>
+        </div>
+    </div>
+</header>
+<router-outlet></router-outlet>

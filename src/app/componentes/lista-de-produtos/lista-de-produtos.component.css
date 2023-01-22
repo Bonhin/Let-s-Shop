@@ -1,0 +1,48 @@
+.format-title{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100ch;
+}
+
+.card {
+    width: 300px;
+    height: 350px;
+    text-align: center;
+    margin: 40px;
+}
+
+.card img {
+    width: 200px;
+    height: 200px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left: 40px;
+    margin-right: 40px;
+    transition: 0.3s ease-in-out;
+}
+
+.card img:hover{
+    transition: 0.3s ease-in-out;
+    transform: scale(1.1);
+}
+
+.card-top{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding-top:  10px;
+    padding-bottom: 5px;
+    background-color: #f7e6fc;
+}
+
+.card-top a{
+    cursor: pointer;
+}
+
+.card-top a:hover{
+    color: #ffffff;
+}
+
+
+

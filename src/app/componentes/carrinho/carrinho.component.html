@@ -1,0 +1,57 @@
+<ng-container *ngIf="produtos.length !=0">
+    <div class="position-table">
+        <div class="card-table">
+            <div class="card-produtos">
+                <table class="table table-responsive">
+                    <thead>
+                        <tr>
+                            <th>Item Number</th>
+                            <th>Product Name</th>
+                            <th>Product Image</th>
+                            <th>Description</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Total</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let produto of produtos; let i = index">
+                            <td>{{i+1}}</td>
+                            <td>{{produto.title}}</td>
+                            <td><img class="format-image" src="{{produto.image}}" alt=""></td>
+                            <td>{{produto.description}}</td>
+                            <td>{{produto.price}}</td>
+                            <td>{{produto.quantity}}</td>
+                            <td>{{produto.total}}</td>
+                            <td><button class="btn btn-danger" style="background-color: #6c038b; border: none;"><i class="fas fa-trash-alt" (click)=removerItem(produto)></i></button></td>
+                        </tr>
+                        <tr>
+                            <td colspan="4"></td>
+                            <td><button (click)=limparCarrinho() style="width: 130px;" class="btn btn-danger">Clean Cart!</button></td>
+                            <td><button class="btn btn-primary" [routerLink]="['/home/lista']" style="background-color: #6c038b; border: none; width: 130px;">Shop More</button></td>
+                            <td><button [routerLink]="['/checkout']" class="btn btn-primary" style="width: 130px; background-color: green; border: none;">Checkout</button></td>
+                            <td style="width: 150px;"><Strong>Total : $ {{precoTotal}}</Strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</ng-container>
+
+
+
+
+<ng-container *ngIf="produtos.length == 0">
+    <div class="container">
+        <div class="card">
+            <h4 class="card-title">My Cart</h4>
+            <div class="card-div">
+                <img src="assets\carrinho-vazio.png" style="height: 200px; width: 200px;">&nbsp;
+                <h5>You cart is empty!</h5>&nbsp;
+                <button [routerLink]="['/home/lista']" class="btn btn-primary" style="background-color: #6c038b; border: none;">Shop now</button>            
+            </div>
+        </div>
+    </div>
+</ng-container>

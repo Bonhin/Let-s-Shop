@@ -1,0 +1,27 @@
+.container{
+    max-width: 30%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.create-format{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icon-container-position{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    color: #6c038b;
+}
+
+.mensagem-position{
+    display: flex;
+    justify-content: center;
+}

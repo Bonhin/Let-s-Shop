@@ -1,0 +1,9 @@
+.not-found-format{
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    margin: 20px;
+    text-align: center;
+}

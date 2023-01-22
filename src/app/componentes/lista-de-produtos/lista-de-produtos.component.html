@@ -1,0 +1,38 @@
+<div class="card-top">
+
+    <div class="item">
+        <a (click)="filtro('')">
+            <h6>All products</h6>
+        </a>
+    </div>
+    <div class="item">
+        <a (click)="filtro('electronics')">
+            <h6>Electronics</h6>
+        </a>
+    </div>
+    <div class="item">
+        <a (click)="filtro('fashion')">
+            <h6>Fashion</h6>
+        </a>
+    </div>
+    <div class="item">
+        <a (click)="filtro('jewelery')">
+            <h6>Jewllery</h6>
+        </a>
+    </div>
+
+</div>
+
+<div class="container">
+    <div class="row">
+        <ng-container class="teste" *ngFor="let produto of  filtroCategoria | buscar:produtoEncontrado:'title'">
+            <div class="card col-m-3">
+                <img class="format-image" src="{{produto.image}}" alt="">
+                <small class="format-title">{{produto.title}}</small>
+                <p><strong>Price: </strong>${{produto.price}}</p>
+                <button class="btn btn-primary" style="background-color: #6c038b; border: none;"
+                    (click)=adicionarAoCarrinho(produto)>Add to Cart</button>
+            </div>
+        </ng-container>
+    </div>
+</div>

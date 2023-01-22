@@ -1,0 +1,43 @@
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 400px;
+    margin: 20px;
+}
+
+.card-title{
+    margin: 10px;
+}
+
+.card-div{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-table{
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    text-align: center;
+    width: 90%;
+}
+
+.position-table{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.format-image{
+    width: 200px;
+    height: 200px;
+}
+
+.container td button {
+    width: 150px;
+}

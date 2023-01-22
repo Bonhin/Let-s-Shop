@@ -1,0 +1,26 @@
+<form id="form-box" (ngSubmit)="onSubmit()">
+  <div id="form-title">Shipping Address</div>
+  <div>
+    <div class="form-group">
+      <label for="AdressLine">Address Line</label>
+      <input type="text" formControlName="AdressLine" class="form-control" />
+      <br>
+    </div>
+    <div class="form-group">
+      <label for="Suburb">Suburb</label>
+      <input type="text" formControlName="Suburb" class="form-control" />
+      <br>
+    </div>
+    <div class="form-group">
+      <label for="State">State</label>
+      <input type="text" formControlName="State" class="form-control" />
+      <br>
+    </div>
+    <div class="form-group">
+      <label for="Postcode">Postcode</label>
+      <input type="number" formControlName="Postcode" class="form-control" />
+      <br>
+    </div>
+    <div class="format-button">
+      <button type="submit" [routerLink]="['']" class="btn btn-primary" style="background-color: #6c038b; border: none;">Conclude</button>
+    </div>

@@ -1,0 +1,26 @@
+#form-box {
+    height: content;
+    padding: 2em 3.5em;
+    border-top: 50px solid #6c038b;
+    border-bottom: 2px solid #6c038b;
+  }
+  
+  #form-title {
+    font-size: 1.6em;
+    padding-bottom: 6px;
+    margin-bottom: 25px;
+    border-bottom: 1.5px solid #e8e8e8;
+  }
+ 
+  .form-input {
+    width: 70%;
+    height: 30px;
+    font-size: 16px;
+    padding-left: 6px;
+  }
+  
+  .form-input:not(:last-child) {
+    margin-bottom: 15px;
+  }
+  
+  
